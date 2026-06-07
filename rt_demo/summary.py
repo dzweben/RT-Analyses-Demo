@@ -32,7 +32,7 @@ def summarize(rts: pd.DataFrame, group_cols: list[str] | None = None) -> pd.Data
     if not group_cols:
         return _one_group(df).to_frame().T.reset_index(drop=True)
 
-    return (df.groupby(group_cols, dropna=False)
+    return (df.groupby(group_cols, dropna=False, group_keys=True)[df.columns.difference(group_cols).tolist()]
               .apply(_one_group)
               .reset_index())
 

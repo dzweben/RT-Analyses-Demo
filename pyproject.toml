@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rt-demo"
+version = "0.1.0"
+description = "Extract reaction times from fMRI task event logs"
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [{ name = "Danny Zweben" }]
+requires-python = ">=3.9"
+dependencies = [
+    "pandas>=1.5",
+    "numpy>=1.23",
+    "matplotlib>=3.6",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7",
+    "pytest-cov",
+    "jupyter",
+]
+
+[project.scripts]
+rt-demo = "rt_demo.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["rt_demo*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra -q"

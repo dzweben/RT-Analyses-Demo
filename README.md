@@ -2,7 +2,6 @@
 
 [![tests](https://github.com/dzweben/RT-Analyses-Demo/actions/workflows/tests.yml/badge.svg)](https://github.com/dzweben/RT-Analyses-Demo/actions/workflows/tests.yml)
 [![python](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12-blue.svg)](#)
-[![license](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
 Extracting reaction times from fMRI task event logs — Presentation `.log` files and BIDS `events.tsv` files. Synthetic example data so you can run the whole thing without any real participant files.
 
@@ -79,7 +78,3 @@ RT-Analyses-Demo/
 ## Notebook walkthrough
 
 `examples/01_walkthrough.ipynb` runs through parse → extract → summarize → plot → BIDS variant in 5-6 cells.
-
-## License
-
-MIT.
